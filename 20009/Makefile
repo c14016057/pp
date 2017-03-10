@@ -1,4 +1,4 @@
-TARGET=ISMQ ISMQ-disjoint ISMQ-ST ISMQ-coST ISMQ-BIT
+TARGET=ISMQ ISMQ-disjoint ISMQ-ST ISMQ-coST ISMQ-BIT MYISMQ
 
 CFLAG=-Wall -std=c++11 -O2 -msse -march=native
 CXX=g++
@@ -7,6 +7,8 @@ all: $(TARGET)
 
 ISMQ: main.cpp ISMQ.cpp
 	$(CXX) $(CFLAG) main.cpp ISMQ.cpp -o ISMQ
+MYISMQ: main.cpp MYISMQ.cpp
+	$(CXX) $(CFLAG) main.cpp MYISMQ.cpp -o MYISMQ
 
 ISMQ-disjoint: main.cpp ISMQ-disjoint.cpp
 	$(CXX) $(CFLAG) main.cpp ISMQ-disjoint.cpp -o ISMQ-disjoint
